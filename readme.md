@@ -1,6 +1,8 @@
 # esbuild react starter
 
-A super simple starter using react build 
+![](rocket.gif)
+
+A super simple starter using react and esbuild
 
 Including handy presets:
 
