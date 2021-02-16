@@ -5,8 +5,8 @@
   "main": "app.jsx",
   "scripts": {
     "test": "test",
-    "build":"esbuild src/app.jsx --bundle --minify --platform=browser --outfile=dist/bundle.js --define:process.env.NODE_ENV=\\\"production\\\" --inject:./react-shim.js & esbuild --bundle src/style.css --minify --outfile=dist/style.css",
-    "start": "concurrently --kill-others \"esbuild src/app.jsx --bundle --platform=browser --outfile=dist/bundle.js --inject:./react-shim.js --define:process.env.NODE_ENV=\\\\\\\"production\\\\\\\" --watch\"  \"esbuild --bundle src/style.css --outfile=dist/style.css --watch\" \"servor ./dist index.html 8080 --reload --browse\""
+    "build": "node build.js -build",
+    "start": "node build.js -watch"
   },
   "keywords": [
     "esbuild",
@@ -22,7 +22,6 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "concurrently": "^5.3.0",
     "servor": "^4.0.2"
   }
 }
