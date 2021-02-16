@@ -60,7 +60,6 @@ async function serve() {
   await servor({
     browser:true,
     root: outdirectory,
-    fallback: "index.html",
     port: 8080,
   });
 }
